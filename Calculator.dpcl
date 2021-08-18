@@ -1,0 +1,99 @@
+SWR $100 "+ (add)"
+SWR $117 "- (subtract)"
+SWR $134 "* (multiply)"
+SWR $151 "/ (divide)"
+SWR $168 "Raise to power"
+SWR $185 "Square root"
+SWR $202 "Sine"
+SWR $219 "Cosine"
+SWR $236 "Tangent"
+SWR $253 "Arcsine"
+SWR $270 "Arccosine"
+SWR $287 "Arctangent"
+SWR $304 "Natural log"
+SWR $321 "Base 10 log"
+FWB 1
+DCL
+DST 0 0 "Operation?"
+PKY $1000
+PSL $0 14 $100
+DCL
+DST 0 0 "Operand?"
+PKY $1000
+PNF $1
+CLB $5 $0 5
+FIB $5
+DCL
+DST 0 0 "Second operand?"
+PKY $1000
+PNF $6
+FEN
+CEB $10 $0 0
+FIB $10
+AAF $11 $1 $6
+FEN
+CEB $10 $0 1
+FIB $10
+ASF $11 $1 $6
+FEN
+CEB $10 $0 2
+FIB $10
+AMF $11 $1 $6
+FEN
+CEB $10 $0 3
+FIB $10
+ADF $11 $1 $6
+FEN
+CEB $10 $0 4
+FIB $10
+MPW $11 $1 $6
+FEN
+CEB $10 $0 5
+FIB $10
+MSR $11 $1
+FEN
+CEB $10 $0 6
+FIB $10
+MSN $11 $1
+FEN
+CEB $10 $0 7
+FIB $10
+MCS $11 $1
+FEN
+CEB $10 $0 8
+FIB $10
+MTN $11 $1
+FEN
+CEB $10 $0 9
+FIB $10
+MAS $11 $1
+FEN
+CEB $10 $0 10
+FIB $10
+MAC $11 $1
+FEN
+CEB $10 $0 11
+FIB $10
+MAT $11 $1
+FEN
+CEB $10 $0 12
+FIB $10
+MLN $11 $1
+FEN
+CEB $10 $0 13
+FIB $10
+MLG $11 $1
+FEN
+NBL $15 $0
+AML $15 $15 17
+AAL $15 $15 100
+DCL
+DST 0 0 $$15
+DNF 0 1 $1
+FIB $5
+DNF 0 2 $6
+FEN
+DST 0 3 "="
+DNF 0 4 $11
+PKY $1000
+FEN

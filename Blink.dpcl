@@ -1,0 +1,10 @@
+dcl
+xsm 3 1
+fwb 1
+xdw 3 1
+dnb 0 0 1
+tsl 500
+xdw 3 0
+dnb 0 0 0
+tsl 500
+fen
